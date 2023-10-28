@@ -23,7 +23,8 @@ function App() {
         <div>
         <Header />
         <h1>This is the checkout page</h1>
-        </div>}/>
+        </div>
+        }/>
       </Routes>
     </div>
     </BrowserRouter>
