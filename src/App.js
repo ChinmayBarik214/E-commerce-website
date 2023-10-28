@@ -6,23 +6,23 @@ import {BrowserRouter,
         Routes,
         Route
 } from "react-router-dom";
+import Checkout from "./Checkout";
 
 function App() {
   return (
     // BEM
     <BrowserRouter>
     <div className="app">
+      <Header />
       <Routes>
-        <Route path="/" element={
-        <div>
-        <Header />
-        <Home />
-        </div>
-        }/>
         <Route path="checkout/*" element={
         <div>
-        <Header />
-        <h1>This is the checkout page</h1>
+        <Checkout />
+        </div>
+        }/>
+        <Route path="/" element={
+        <div>
+        <Home />
         </div>
         }/>
       </Routes>
