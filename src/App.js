@@ -12,7 +12,7 @@ import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 
 function App() {
-  const [{}, dispatch] = useStateValue();
+  const [{basket}, dispatch] = useStateValue();
   useEffect(() => {
     // will only run once when the app component loads...
     auth.onAuthStateChanged(authUser => {
