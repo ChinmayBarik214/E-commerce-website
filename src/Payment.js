@@ -44,8 +44,11 @@ function Payment() {
             setSucceeded(true);
             setError(null);
             setProcessing(false);
-            // history.replace('/orders') <- What sunny wrote
-            navigate('/orders', { replace: true }) // We havent even imported this reee
+            dispatch({
+                type: 'EMPTY_BASKET'
+            })
+            // history.replace('/orders') <- What sunny wrote what we wrote: (Line 48)
+            navigate('/orders', { replace: true })
         })
     }
     const handleChange = event => {

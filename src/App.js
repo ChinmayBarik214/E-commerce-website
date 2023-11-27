@@ -8,6 +8,7 @@ import {BrowserRouter,
 } from "react-router-dom";
 import Checkout from "./Checkout";
 import Login from "./Login";
+import Orders from "./Orders";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import Payment from "./Payment";
@@ -42,6 +43,12 @@ function App() {
     <BrowserRouter>
     <div className="app">
       <Routes>
+        <Route path="orders/*" element={
+        <div>
+        <Header />
+        <Orders />
+        </div>
+        }/>
         <Route path="login/*" element={
         <div>
         <Login />
